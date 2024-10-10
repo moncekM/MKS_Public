@@ -34,6 +34,7 @@
 #define  LED_TIME_BLINK 300
 #define LED_TIME_SHORT 100
 #define LED_TIME_LONG  1000
+#define BUTTON_DELAY_SHORT 5
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -59,19 +60,21 @@ static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN 0 */
 volatile uint32_t Tick;
 void blink(void)
-	  {
-		  static uint32_t delay;
+{
+	static uint32_t delay;
 
-		  if (Tick > delay + LED_TIME_BLINK) {
-			  LL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
-			  delay = Tick;
-		  }
-	  }
+	if (Tick > delay + LED_TIME_BLINK) {
+		LL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
+		delay = Tick;
+	}
+}
 void button(void){
 	static uint32_t off_time;
-		if (Tick > off_time) {
-			LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		}
+	static uint32_t dellay;
+	if (Tick > off_time) {
+		LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+	}
+	static uint16_t debounce = 0xFFFF;
 	static uint32_t old_s2;
 	uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
 	if (old_s2 && !new_s2) { // falling edge
@@ -79,15 +82,23 @@ void button(void){
 		LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
 	}
 	old_s2 = new_s2;
-	static uint32_t old_s1;
-	uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
-	if (old_s1 && !new_s1) { // falling edge
-		off_time = Tick + LED_TIME_LONG;
-		LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-	}
-	old_s1 = new_s1;
+	static uint32_t ispressed = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+	if (Tick > dellay + BUTTON_DELAY_SHORT ){
+		debounce<<=1;
+		if (ispressed){
 
-}
+		}
+		}
+//		static uint32_t old_s1;
+//		uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+//		if (old_s1 && !new_s1) { // falling edge
+//			off_time = Tick + LED_TIME_LONG;
+//			LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+//		}
+//		old_s1 = new_s1;
+
+	}
+
 
 
 
