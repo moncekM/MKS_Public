@@ -1,0 +1,1019 @@
+08:17:00 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:71:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   71 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:70:15: warning: variable 'token' set but not used [-Wunused-but-set-variable]
+   70 |         char *token;
+      |               ^~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  14696	    104	   2240	  17040	   4290	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+08:45:40 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:118:13: error: invalid storage class for function 'uart_byte_available'
+  118 | static void uart_byte_available (uint8_t c){
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:134:5: warning: 'main' is normally a non-static function [-Wmain]
+  134 | int main(void)
+      |     ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:226:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  226 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:259:13: error: invalid storage class for function 'MX_DMA_Init'
+  259 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:277:13: error: invalid storage class for function 'MX_GPIO_Init'
+  277 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:337:1: error: expected declaration or statement at end of input
+  337 | }
+      | ^
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:337:1: error: expected declaration or statement at end of input
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:56:13: warning: 'MX_GPIO_Init' used but never defined
+   56 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:57:13: warning: 'MX_DMA_Init' used but never defined
+   57 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:327:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  327 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:277:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  277 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:259:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  259 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:226:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  226 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:134:5: warning: 'main' defined but not used [-Wunused-function]
+  134 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:187:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  187 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:46:35 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:227:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  227 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:260:13: error: invalid storage class for function 'MX_DMA_Init'
+  260 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:278:13: error: invalid storage class for function 'MX_GPIO_Init'
+  278 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:338:1: error: expected declaration or statement at end of input
+  338 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:56:13: warning: 'MX_GPIO_Init' used but never defined
+   56 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:57:13: warning: 'MX_DMA_Init' used but never defined
+   57 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:328:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  328 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:278:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  278 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:260:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  260 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:227:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  227 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:188:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  188 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:48:17 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:118:1: error: expected identifier or '(' before '}' token
+  118 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:228:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:261:13: error: invalid storage class for function 'MX_DMA_Init'
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:279:13: error: invalid storage class for function 'MX_GPIO_Init'
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:1: error: expected declaration or statement at end of input
+  339 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:56:13: warning: 'MX_GPIO_Init' used but never defined
+   56 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:57:13: warning: 'MX_DMA_Init' used but never defined
+   57 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:329:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  329 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:261:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:228:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:189:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  189 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:48:21 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:228:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:261:13: error: invalid storage class for function 'MX_DMA_Init'
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:279:13: error: invalid storage class for function 'MX_GPIO_Init'
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:1: error: expected declaration or statement at end of input
+  339 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:56:13: warning: 'MX_GPIO_Init' used but never defined
+   56 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:57:13: warning: 'MX_DMA_Init' used but never defined
+   57 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:329:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  329 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:261:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:228:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:189:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  189 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:48:23 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:228:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:261:13: error: invalid storage class for function 'MX_DMA_Init'
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:279:13: error: invalid storage class for function 'MX_GPIO_Init'
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:1: error: expected declaration or statement at end of input
+  339 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:56:13: warning: 'MX_GPIO_Init' used but never defined
+   56 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:57:13: warning: 'MX_DMA_Init' used but never defined
+   57 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:329:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  329 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:261:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:228:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:189:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  189 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:48:26 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:228:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:261:13: error: invalid storage class for function 'MX_DMA_Init'
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:279:13: error: invalid storage class for function 'MX_GPIO_Init'
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:1: error: expected declaration or statement at end of input
+  339 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:56:13: warning: 'MX_GPIO_Init' used but never defined
+   56 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:57:13: warning: 'MX_DMA_Init' used but never defined
+   57 | static void MX_DMA_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:329:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  329 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  279 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:261:13: warning: 'MX_DMA_Init' defined but not used [-Wunused-function]
+  261 | static void MX_DMA_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:228:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  228 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:189:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  189 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:50:12 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data,"");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  15808	    104	   2248	  18160	   46f0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+08:50:24 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15808	    104	   2248	  18160	   46f0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+08:52:51 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  15808	    104	   2248	  18160	   46f0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+08:53:03 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15808	    104	   2248	  18160	   46f0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+08:54:22 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  15820	    104	   2248	  18172	   46fc	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+08:55:42 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:179:39: error: 'b' undeclared (first use in this function)
+  179 |                   uart_byte_available(b);
+      |                                       ^
+../Core/Src/main.c:179:39: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:186:1: error: expected identifier or '(' before '}' token
+  186 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:55:49 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:179:39: error: 'b' undeclared (first use in this function)
+  179 |                   uart_byte_available(b);
+      |                                       ^
+../Core/Src/main.c:179:39: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:186:1: error: expected identifier or '(' before '}' token
+  186 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:57:24 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  15796	    104	   2248	  18148	   46e4	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+08:58:08 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  15796	    104	   2248	  18148	   46e4	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:01:23 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  15784	    104	   2248	  18136	   46d8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:01:28 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15784	    104	   2248	  18136	   46d8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:02:44 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:73:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  15808	    104	   2248	  18160	   46f0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:26:42 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:78:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   78 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:125:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  125 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:125:17: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  125 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:25: note: 'values' was declared here
+  122 |                 uint8_t values;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  19592	    104	   2328	  22024	   5608	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:42:14 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:78:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   78 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:125:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  125 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:129:82: warning: passing argument 5 of 'HAL_I2C_Mem_Write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  129 |                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+      |                                                                                  ^~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const char *'
+  633 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:135:92: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  135 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                            ^~~~~~
+      |                                                                                            |
+      |                                                                                            uint8_t {aka unsigned char}
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:125:17: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  125 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:25: note: 'values' was declared here
+  122 |                 uint8_t values;
+      |                         ^~~~~~
+../Core/Src/main.c:135:25: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  135 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:132:25: note: 'values' was declared here
+  132 |                 uint8_t values;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  20536	    104	   2328	  22968	   59b8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:42:20 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20536	    104	   2328	  22968	   59b8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:47:39 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:80:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   80 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:127:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  127 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:131:82: warning: passing argument 5 of 'HAL_I2C_Mem_Write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  131 |                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+      |                                                                                  ^~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const char *'
+  633 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:137:92: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  137 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                            ^~~~~~
+      |                                                                                            |
+      |                                                                                            uint8_t {aka unsigned char}
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  14048	    104	   2328	  16480	   4060	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:49:22 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:80:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   80 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:127:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  127 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:131:82: warning: passing argument 5 of 'HAL_I2C_Mem_Write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  131 |                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+      |                                                                                  ^~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const char *'
+  633 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:137:92: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  137 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                            ^~~~~~
+      |                                                                                            |
+      |                                                                                            uint8_t {aka unsigned char}
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  14064	    104	   2328	  16496	   4070	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:49:51 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:78:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   78 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:125:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  125 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:129:82: warning: passing argument 5 of 'HAL_I2C_Mem_Write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  129 |                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+      |                                                                                  ^~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const char *'
+  633 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:135:92: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  135 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                            ^~~~~~
+      |                                                                                            |
+      |                                                                                            uint8_t {aka unsigned char}
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:125:17: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  125 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:25: note: 'values' was declared here
+  122 |                 uint8_t values;
+      |                         ^~~~~~
+../Core/Src/main.c:135:25: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  135 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:132:25: note: 'values' was declared here
+  132 |                 uint8_t values;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  20552	    104	   2328	  22984	   59c8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:53:59 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:78:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   78 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:127:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  127 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:131:82: warning: passing argument 5 of 'HAL_I2C_Mem_Write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  131 |                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+      |                                                                                  ^~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const char *'
+  633 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:137:92: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  137 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                            ^~~~~~
+      |                                                                                            |
+      |                                                                                            uint8_t {aka unsigned char}
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:127:17: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  127 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:25: note: 'values' was declared here
+  124 |                 uint8_t values;
+      |                         ^~~~~~
+../Core/Src/main.c:137:25: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  137 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:134:25: note: 'values' was declared here
+  134 |                 uint8_t values;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  20552	    104	   2328	  22984	   59c8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:55:26 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:78:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   78 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:126:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  126 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:130:82: warning: passing argument 5 of 'HAL_I2C_Mem_Write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  130 |                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+      |                                                                                  ^~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const char *'
+  633 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:136:92: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  136 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                            ^~~~~~
+      |                                                                                            |
+      |                                                                                            uint8_t {aka unsigned char}
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:126:17: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  126 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:25: note: 'values' was declared here
+  123 |                 uint8_t values;
+      |                         ^~~~~~
+../Core/Src/main.c:136:25: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  136 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:133:25: note: 'values' was declared here
+  133 |                 uint8_t values;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  20520	    104	   2328	  22952	   59a8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
+09:56:57 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20520	    104	   2328	  22952	   59a8	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:58:38 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:78:24: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   78 |         token = strtok(data," ");
+      |                        ^~~~
+In file included from ../Core/Src/main.c:25:
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+../Core/Src/main.c:126:84: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  126 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                    ^~~~~~
+      |                                                                                    |
+      |                                                                                    uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:130:82: warning: passing argument 5 of 'HAL_I2C_Mem_Write' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  130 |                 HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+      |                                                                                  ^~~~
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const char *'
+  633 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                          ~~~~~~~~~^~~~~
+../Core/Src/main.c:136:92: warning: passing argument 5 of 'HAL_I2C_Mem_Read' makes pointer from integer without a cast [-Wint-conversion]
+  136 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                                                                                            ^~~~~~
+      |                                                                                            |
+      |                                                                                            uint8_t {aka unsigned char}
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:635:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  635 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                         ~~~~~~~~~^~~~~
+../Core/Src/main.c:126:17: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  126 |                 HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:25: note: 'values' was declared here
+  123 |                 uint8_t values;
+      |                         ^~~~~~
+../Core/Src/main.c:136:25: warning: 'values' may be used uninitialized [-Wmaybe-uninitialized]
+  136 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:133:25: note: 'values' was declared here
+  133 |                 uint8_t values;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "fifth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\fifth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fifth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fifth_sesion.elf
+ 
+arm-none-eabi-size  fifth_sesion.elf 
+arm-none-eabi-objdump -h -S fifth_sesion.elf  > "fifth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  20572	    104	   2328	  23004	   59dc	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: fifth_sesion.list
+ 
