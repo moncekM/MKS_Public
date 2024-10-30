@@ -80,77 +80,106 @@ static void uart_process_command(const char *data){
 	//printf("received: '%s'\n", data);
 
 	if (strcasecmp("HELLO",token)==0){
-		printf("HELLO, Welcome to the HEll");
+		printf("HELLO, Welcome to the HELL");
 		printf("\n");
 	}else if (strcasecmp("LED1",token)==0) {
 		token = strtok(NULL," ");
 		if (strcasecmp("ON",token)==0){
 			HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
 			stateLED1 = 1;
-		}else {
+		}else if (strcasecmp("OFF",token)==0) {
 			HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
 			stateLED1 = 0;
+		}else {
+			printf("command not supported");
+			printf("\n");
 		}
 	}else if (strcasecmp("LED2",token)==0) {
 		token = strtok(NULL," ");
 		if (strcasecmp("ON",token)==0){
 			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
 			stateLED2 =1;
-		}else {
+		}else if (strcasecmp("OFF",token)==0){
 			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
 			stateLED2 = 0;
+		}else {
+			printf("command not supported");
+			printf("\n");
 		}
 	}else if (strcasecmp("STATUS",token)==0) {
-		if ((stateLED1 && stateLED2) == 0){
+		if ((stateLED1 || stateLED2) == 0){
 			printf("both LED is OFF");
-		}
-		if (stateLED1 == 1){
-			printf(" LED1 is ON");
-		}else {
-			printf(" LED1 is OFF");
-		}
-		if (stateLED2 == 1){
-			printf(" LED2 is ON");
-
-		}else {
-			printf(" LED2 is OFF");
+			printf("\n");
+			return;
 		}
 		if ((stateLED1 && stateLED2) == 1){
 			printf("both LED is ON");
+			printf("\n");
+			return;
 		}
+		if (stateLED1 == 1 && stateLED2 == 0){
+			printf(" LED1 is ON");
+			printf("\n");
+		}else {
+			printf(" LED1 is OFF");
+			printf("\n");
+		}
+		if (stateLED2 == 1 && stateLED2 == 0){
+			printf(" LED2 is ON");
+			printf("\n");
+
+		}else {
+			printf(" LED2 is OFF");
+			printf("\n");
+		}
+
 	}else if (strcasecmp("READ",token)==0) {
 		token = strtok(NULL," ");
 		uint8_t values;
 		uint8_t addr = atoi(token);
 
-		HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
-
-		printf("Addr: 0x%02X = 0X%02X\n", addr, values);
+		//HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
+		HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &values, sizeof(values), 1000);
+		printf("Addr: 000x%02X = 0X%02X\n", addr, values);
+		printf("\n");
 	}else if (strcasecmp("WRITE",token)==0) {
-		HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, 0, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
-		printf("write succesfuly");
+		token = strtok(NULL," ");
+		uint8_t addr = atoi(token);
+		token = strtok(NULL," ");
+		uint8_t data = atoi(token);
+		//HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, data, sizeof(data), 1000);
+		HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &data, sizeof(data), 1000);
+		while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000) == HAL_TIMEOUT) {}
+		printf("write successful");
+		printf("\n");
 	}else if (strcasecmp("DUMP",token)==0) {
 		uint8_t values;
 		uint16_t addr = 0x0000;
-		while (addr != 0x00F){
-			HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, values, sizeof(values), 1000);
-			printf("Addr: 0x%02X = 0X%02X\n", addr, values);
+		while (addr != 0x0010){
+			HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &values, sizeof(values), 1000);
+			if (addr % 8 == 0 && addr != 0x0000){
+				printf("\n");
+			}
+			printf("%02X  ",values);
+			addr = addr + 0x0001;
 		}
+		printf("\n");
 	}else {
-		printf("command unsupported or unrecognized");
+		printf("command not supported");
+		printf("\n");
 	}
 }
 
 static void uart_byte_available(uint8_t c)
 {
- static uint16_t cnt;
- static char data[CMD_BUFFER_LEN];
- if (cnt < CMD_BUFFER_LEN && c >= 32 && c <= 126) data[cnt++] = c;
- if ((c == '\n' || c == '\r') && cnt > 0) {
- data[cnt] = '\0';
- uart_process_command(data);
- cnt = 0;
- }
+	static uint16_t cnt;
+	static char data[CMD_BUFFER_LEN];
+	if (cnt < CMD_BUFFER_LEN && c >= 32 && c <= 126) data[cnt++] = c;
+	if ((c == '\n' || c == '\r') && cnt > 0) {
+		data[cnt] = '\0';
+		uart_process_command(data);
+		cnt = 0;
+	}
 }
 
 /* USER CODE END 0 */
