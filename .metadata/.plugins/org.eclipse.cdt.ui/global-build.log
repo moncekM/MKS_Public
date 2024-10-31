@@ -1094,3 +1094,282 @@ Finished building: default.size.stdout
  
 Finished building: sixth_sesion.list
  
+09:31:25 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12316	   2060	   1788	  16164	   3f24	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:33:19 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:77:27: error: 'temp' undeclared (first use in this function)
+   77 |                 sct_value(temp /10, 0);
+      |                           ^~~~
+../Core/Src/main.c:77:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:33:39 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12248	   2060	   1788	  16096	   3ee0	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:34:15 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12248	   2060	   1788	  16096	   3ee0	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:36:11 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12260	   2060	   1788	  16108	   3eec	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:38:01 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12260	   2060	   1788	  16108	   3eec	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:39:54 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12256	   2060	   1788	  16104	   3ee8	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:40:20 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12256	   2060	   1788	  16104	   3ee8	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:40:53 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12256	   2060	   1788	  16104	   3ee8	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:41:34 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12256	   2060	   1788	  16104	   3ee8	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:44:35 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12256	   2060	   1788	  16104	   3ee8	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:46:32 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12268	   2060	   1788	  16116	   3ef4	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:48:22 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:70:50: error: initializer element is not constant
+   70 |                 static uint32_t current_time_1 = HAL_GetTick(); // Get the current system tick
+      |                                                  ^~~~~~~~~~~
+../Core/Src/main.c:86:50: error: initializer element is not constant
+   86 |                 static uint32_t current_time_2 = HAL_GetTick(); // Get the current system tick
+      |                                                  ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:48:41 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21360	    104	   2328	  23792	   5cf0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:48:41 **** Incremental Build of configuration Debug for project forth_sesion ****
+make -j8 all 
+arm-none-eabi-size  forth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17944	     12	   1804	  19760	   4d30	forth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:48:42 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12280	   2060	   1796	  16136	   3f08	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:48:49 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12280	   2060	   1796	  16136	   3f08	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:48:59 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12280	   2060	   1796	  16136	   3f08	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:49:24 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12280	   2060	   1796	  16136	   3f08	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:49:54 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21360	    104	   2328	  23792	   5cf0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:49:55 **** Incremental Build of configuration Debug for project forth_sesion ****
+make -j8 all 
+arm-none-eabi-size  forth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17944	     12	   1804	  19760	   4d30	forth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:49:55 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display':
+../Core/Src/main.c:70:50: error: initializer element is not constant
+   70 |                 static uint32_t current_time_1 = HAL_GetTick(); // Get the current system tick
+      |                                                  ^~~~~~~~~~~
+../Core/Src/main.c:86:50: error: initializer element is not constant
+   86 |                 static uint32_t current_time_2 = HAL_GetTick(); // Get the current system tick
+      |                                                  ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:50:23 **** Incremental Build of configuration Debug for project fifth_sesion ****
+make -j8 all 
+arm-none-eabi-size  fifth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21360	    104	   2328	  23792	   5cf0	fifth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:50:23 **** Incremental Build of configuration Debug for project forth_sesion ****
+make -j8 all 
+arm-none-eabi-size  forth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17944	     12	   1804	  19760	   4d30	forth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:50:23 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12280	   2060	   1796	  16136	   3f08	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:50:29 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-size  sixth_sesion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12280	   2060	   1796	  16136	   3f08	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+09:50:57 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12280	   2060	   1796	  16136	   3f08	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 
+09:53:10 **** Incremental Build of configuration Debug for project sixth_sesion ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sixth_sesion.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sixth_sesion\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sixth_sesion.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sixth_sesion.elf
+ 
+arm-none-eabi-size  sixth_sesion.elf 
+arm-none-eabi-objdump -h -S sixth_sesion.elf  > "sixth_sesion.list"
+   text	   data	    bss	    dec	    hex	filename
+  12292	   2060	   1804	  16156	   3f1c	sixth_sesion.elf
+Finished building: default.size.stdout
+ 
+Finished building: sixth_sesion.list
+ 

@@ -65,16 +65,14 @@ static void MX_ADC_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 void display (void){
-
+	volatile uint32_t current_time = HAL_GetTick(); // Get the current system tick
+	volatile uint32_t last_time;
 	if (state == SHOW_digi){
-		 uint32_t current_time_1 = HAL_GetTick(); // Get the current system tick
-		static uint32_t last_time_1;
-		static int16_t temp;
-		if ((current_time_1 - last_time_1)> CONVERT_T_DELAY){
-			//HAL_Delay(CONVERT_T_DELAY);
-			OWConvertAll();
-			OWReadTemperature(&temp);
-			last_time_1 = current_time_1;
+		OWConvertAll();
+		if ((current_time - last_time)> CONVERT_T_DELAY){
+		HAL_Delay(CONVERT_T_DELAY);
+		int16_t temp;
+		OWReadTemperature(&temp);
 		}
 		sct_value(temp /10, 0);
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
@@ -82,15 +80,12 @@ void display (void){
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
 	}
 	if (state == SHOW_ntc){
-		static uint32_t result ;
-		 uint32_t current_time_2 = HAL_GetTick(); // Get the current system tick
-		static uint32_t last_time_2;
-		if ((current_time_2 - last_time_2)> NTCDELAY){
-			result = HAL_ADC_GetValue(&hadc);
-			last_time_2 = current_time_2;
-			sct_value(data[result], 0);
-		}
 
+		uint32_t result ;
+		if ((current_time - last_time)> NTCDELAY){
+			result = HAL_ADC_GetValue(&hadc);
+		}
+		sct_value(data[result], 0);
 		//HAL_Delay(500);
 		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
 	}else{
