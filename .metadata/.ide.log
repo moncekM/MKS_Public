@@ -1124,3 +1124,90 @@
 2024-11-07 07:27:37,353 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 1163mS.
 2024-11-07 07:27:37,354 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 1mS.
 2024-11-07 07:27:37,359 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 07:50:55,941 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2024-11-07 07:50:57,943 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2024-11-07 07:55:52,474 [INFO] WebApp:189 - Connection lost
+2024-11-07 07:55:52,610 [INFO] WebApp:186 - Connection restablished
+2024-11-07 08:12:43,232 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 08:12:52,770 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 08:12:52,894 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 08:13:02,229 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 08:13:02,343 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 08:13:05,234 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 450669024 Bytes (849346560)
+2024-11-07 08:13:08,211 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 473779992 Bytes (849346560)
+2024-11-07 08:13:10,103 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 512480176 Bytes (849346560)
+2024-11-07 08:13:10,441 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 08:13:10,442 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2024-11-07 08:13:10,442 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 08:13:10,442 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 08:13:10,442 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 08:13:10,442 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 08:13:10,442 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 08:13:10,443 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-07 08:13:10,509 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\license.tmp_save
+2024-11-07 08:13:10,593 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\license.tmp
+2024-11-07 08:13:10,620 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\gpio.tmp_save
+2024-11-07 08:13:10,705 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\gpio.tmp
+2024-11-07 08:13:10,816 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-11-07 08:13:10,822 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_inc.tmp_save
+2024-11-07 08:13:10,900 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_inc.tmp
+2024-11-07 08:13:10,904 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_vars.tmp_save
+2024-11-07 08:13:10,972 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_vars.tmp
+2024-11-07 08:13:10,975 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_pfp.tmp_save
+2024-11-07 08:13:11,044 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_pfp.tmp
+2024-11-07 08:13:11,048 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_obj_creat.tmp_save
+2024-11-07 08:13:11,124 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_obj_creat.tmp
+2024-11-07 08:13:11,127 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_kernelStart.tmp_save
+2024-11-07 08:13:11,185 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_kernelStart.tmp
+2024-11-07 08:13:11,189 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_default_thread.tmp_save
+2024-11-07 08:13:11,256 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_default_thread.tmp
+2024-11-07 08:13:11,259 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_threads.tmp_save
+2024-11-07 08:13:11,334 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_threads.tmp
+2024-11-07 08:13:11,353 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-11-07 08:13:11,361 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_inc.tmp_save
+2024-11-07 08:13:11,428 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_inc.tmp
+2024-11-07 08:13:11,433 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_vars.tmp_save
+2024-11-07 08:13:11,486 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_vars.tmp
+2024-11-07 08:13:11,491 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_pfp.tmp_save
+2024-11-07 08:13:11,545 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_pfp.tmp
+2024-11-07 08:13:11,557 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_obj_creat.tmp_save
+2024-11-07 08:13:11,612 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_obj_creat.tmp
+2024-11-07 08:13:11,618 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_kernelStart.tmp_save
+2024-11-07 08:13:11,672 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_kernelStart.tmp
+2024-11-07 08:13:11,677 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_default_thread.tmp_save
+2024-11-07 08:13:11,730 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_default_thread.tmp
+2024-11-07 08:13:11,736 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_threads.tmp_save
+2024-11-07 08:13:11,789 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\rtos_threads.tmp
+2024-11-07 08:13:11,803 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\FreeRTOSConfig.h_save
+2024-11-07 08:13:11,871 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\FreeRTOSConfig.h
+2024-11-07 08:13:11,885 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\freertos.c_save
+2024-11-07 08:13:11,963 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\freertos.c
+2024-11-07 08:13:11,982 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\stm32f0xx_it.c_save
+2024-11-07 08:13:12,062 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\stm32f0xx_it.c
+2024-11-07 08:13:12,074 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\stm32f0xx_it.h_save
+2024-11-07 08:13:12,144 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\stm32f0xx_it.h
+2024-11-07 08:13:12,163 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\stm32f0xx_hal_msp.c_save
+2024-11-07 08:13:12,280 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\stm32f0xx_hal_msp.c
+2024-11-07 08:13:12,285 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\system.tmp_save
+2024-11-07 08:13:12,349 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\MXTmpFiles\system.tmp
+2024-11-07 08:13:12,363 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\stm32f0xx_hal_timebase_tim.c_save
+2024-11-07 08:13:12,434 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\stm32f0xx_hal_timebase_tim.c
+2024-11-07 08:13:12,453 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\stm32f0xx_hal_conf.h_save
+2024-11-07 08:13:12,535 [INFO] CodeEngine:335 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\stm32f0xx_hal_conf.h
+2024-11-07 08:13:12,571 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\main.h_save
+2024-11-07 08:13:12,645 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Inc\main.h
+2024-11-07 08:13:12,658 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\main.c_save
+2024-11-07 08:13:12,782 [INFO] CodeEngine:279 - Generated code: C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\Core\Src\main.c
+2024-11-07 08:13:13,141 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 203mS.
+2024-11-07 08:13:13,144 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 08:13:13,210 [INFO] ConfigFileManager:1531 - The Die is : DIE440
+2024-11-07 08:13:13,943 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 799mS.
+2024-11-07 08:13:13,944 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 08:13:13,949 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 08:50:04,693 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-07 08:50:06,839 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-07 09:20:14,642 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-07 09:26:18,513 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-07 09:32:20,017 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-07 09:32:23,272 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 09:32:23,272 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

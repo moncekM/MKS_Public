@@ -1,0 +1,25 @@
+09:30:29 **** Incremental Build of configuration Debug for project sesion_7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:75:15: warning: initialization of 'int32_t (*)(void *, uint8_t,  const uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char,  const unsigned char *, short unsigned int)'} from incompatible pointer type 'int32_t (*)(void *, uint8_t,  uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char,  unsigned char *, short unsigned int)'} [-Wincompatible-pointer-types]
+   75 |  .write_reg = platform_write,
+      |               ^~~~~~~~~~~~~~
+../Core/Src/main.c:75:15: note: (near initialization for 'lis2dw12.write_reg')
+../Core/Src/main.c: In function 'StartAcceleroTask':
+../Core/Src/main.c:426:17: warning: unused variable 'msg' [-Wunused-variable]
+  426 |         int16_t msg;
+      |                 ^~~
+arm-none-eabi-gcc -o "sesion_7.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\marti\Documents\____school\Mikrocontrolers\MKS_Public\sesion_7\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sesion_7.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sesion_7.elf
+ 
+arm-none-eabi-size  sesion_7.elf 
+arm-none-eabi-objdump -h -S sesion_7.elf  > "sesion_7.list"
+   text	   data	    bss	    dec	    hex	filename
+  26612	    124	   6284	  33020	   80fc	sesion_7.elf
+Finished building: default.size.stdout
+ 
+Finished building: sesion_7.list
+ 
+
+09:30:30 Build Finished. 0 errors, 2 warnings. (took 817ms)
+
