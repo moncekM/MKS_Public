@@ -1,0 +1,10 @@
+09:09:27 **** Incremental Build of configuration Debug for project sesion_10 ****
+make -j8 all 
+arm-none-eabi-size  sesion_10.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16116	    112	   2056	  18284	   476c	sesion_10.elf
+Finished building: default.size.stdout
+ 
+
+09:09:28 Build Finished. 0 errors, 0 warnings. (took 334ms)
+
